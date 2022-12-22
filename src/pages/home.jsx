@@ -1,10 +1,13 @@
 import React from "react";
 
+import "./style.css"
+
 function Home() {
     return (
-        <div>
-            This is home
-        </div>
+        <section>
+            <div className="main__heading">TRIVIUM</div>
+            <div className="secondary__heading">Power Engineers Pvt. Ltd.</div>
+        </section>
     );
 };
 

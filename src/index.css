@@ -1,9 +1,27 @@
-*, *::before, *::after {
-  position: relative;
-  padding: 0px;
-  margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  	--color-pr: #FFFFFF;
+	--color-bg: #000000;
+	--color-hi: #03a3ee;
+	--color-nav-pr: #FFFFFF;
+	--color-nav-bg: #000000;
 }
 
-.main__container {
-  padding-top: 51px;
+*, *::before, *::after {
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: inherit;
+	font-family: 'Unbounded', cursive;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	color: var(--color-pr);
+	background-color: var(--color-bg);
+	overflow-x: hidden;
 }

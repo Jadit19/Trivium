@@ -1,34 +1,35 @@
 import React from "react";
 
-import NavItem from "./nav_item";
-
 import "./style.css";
 
 function Navbar() {
-    const hamOnClick = () => {
-        document.querySelector(".nav__items").classList.toggle("open");
-        document.querySelector(".ham").classList.toggle("cross");
+
+    const handleClick = () => {
+        document.querySelector(".nav__button").classList.toggle("open");
+        document.querySelector(".nav__overlay").classList.toggle("open")
     };
 
     return (
-        <nav>
-            <a href="/" className="nav__left">
-                LOGO
-            </a>
-
-            <div className="nav__right">
-                <div className="ham" onClick={hamOnClick}>
-                    <div className="__upper"></div>
-                    <div className="__middle"></div>
-                    <div className="__lower"></div>
+        <>
+            <nav>
+                <div className="nav__button" onClick={handleClick}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div className="nav__items">
-                    <NavItem text={"About Us"} link={"/about"} />
-                    <NavItem text={"Gallery"} link={"/gallery"} />
-                    <NavItem text={"Contact"} link={"/contact"} />
+
+            </nav>
+
+            <div className="nav__overlay">
+                <div className="nav__container">
+                    <a href="/">Home</a>
+                    <a href="/">About Us</a>
+                    <a href="/">Products</a>
+                    <a href="/">Gallery</a>
+                    <a href="/">Contact</a>
                 </div>
             </div>
-        </nav>
+        </>
     );
 };
 
