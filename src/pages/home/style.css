@@ -1,0 +1,19 @@
+.title {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title .main__heading {
+    font-size: 13vw;
+    font-weight: 500;
+}
+
+.title .secondary__heading {
+    font-size: 3.5vw;
+    font-weight: 300;
+    color: var(--color-hi)
+}

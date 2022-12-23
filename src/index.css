@@ -29,7 +29,24 @@ html {
 }
 
 body {
+	width: 100vw;
 	color: var(--color-pr);
 	background-color: var(--color-bg);
 	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+	width: 10px;
+}
+  
+body::-webkit-scrollbar-track {
+	background: var(--color-bg);
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--color-hi);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-pr);
 }
