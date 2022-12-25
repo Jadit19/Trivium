@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import  useLocalStorage from "./hooks/useLocalStorage"
 
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
@@ -11,7 +13,7 @@ import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
 
 function App() {
-	const [isDark, setIsDark] = useState(0);
+	const [isDark, setIsDark] = useLocalStorage('theme', 1);
 
 	return (
 		<Router>

@@ -98,6 +98,8 @@ nav {
     color: var(--color-nav-pr);
     margin: 5px 0px;
     transition: 0.2s ease-in-out;
+    top: 30px;
+    opacity: 0;
 }
 
 .nav__container a:hover {
@@ -122,6 +124,30 @@ nav {
     height: 100%;
 }
 
+.nav__overlay.open a {
+    animation: nav-animate 0.5s ease-in-out forwards;
+}
+
+.nav__overlay.open a:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.nav__overlay.open a:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.nav__overlay.open a:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.nav__overlay.open a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.nav__overlay.open a:nth-child(5) {
+    animation-delay: 0.9s;
+}
+
 .theme__container {
     position: absolute;
     top: 30px;
@@ -138,4 +164,11 @@ nav {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     cursor: pointer;
+}
+
+@keyframes nav-animate {
+    100% {
+        top: 0;
+        opacity: 1;
+    }
 }

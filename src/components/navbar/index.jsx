@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
@@ -10,13 +10,12 @@ function Navbar({ isDark, setIsDark }) {
         document.querySelector(".nav__overlay").classList.toggle("open")
     };
     
-    const handleThemeClick = () => {
+    useEffect(() => {
         if (isDark)
             document.documentElement.className = "dark";
         else
             document.documentElement.className = "light";
-        setIsDark(!isDark);
-    };
+    }, [isDark]);
 
     return (
         <>
@@ -30,7 +29,7 @@ function Navbar({ isDark, setIsDark }) {
             </nav>
 
             <div className="nav__overlay">
-                <div className="theme__container" onClick={handleThemeClick}>
+                <div className="theme__container" onClick={() => setIsDark(!isDark)}>
                     { isDark ? <DarkModeIcon /> : <LightModeIcon /> }
                 </div>
 
